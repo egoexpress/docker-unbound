@@ -1,10 +1,8 @@
-FROM ubuntu:bionic
+FROM ubuntu:disco
 
 LABEL maintainer="Bjoern Stierand <bjoern-github@innovention.de>"
 
 ARG DEBIAN_FRONTEND=noninteractive
-
-ENV VERSION 1.6.7
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
   wget \
