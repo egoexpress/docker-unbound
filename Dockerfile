@@ -1,4 +1,4 @@
-FROM ubuntu:disco
+FROM ubuntu:focal
 
 LABEL maintainer="Bjoern Stierand <bjoern-github@innovention.de>"
 
@@ -6,6 +6,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
   wget \
+  vim-tiny \
   unbound \
   unbound-anchor \
   netcat \
