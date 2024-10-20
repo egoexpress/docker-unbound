@@ -1,10 +1,12 @@
-FROM ubuntu:focal
+FROM ubuntu:kinetic
 
 LABEL maintainer="Bjoern Stierand <bjoern-github@innovention.de>"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt install gnupg \
+  && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 871920D1991BC93C \
+  && apt-get update && apt-get install -y --no-install-recommends \
   wget \
   vim-tiny \
   unbound \
